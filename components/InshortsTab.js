@@ -1,23 +1,27 @@
 import { View, Text, StyleSheet, useWindowDimensions } from 'react-native'
 import React, { useState } from 'react'
 import { TabView, SceneMap } from 'react-native-tab-view';
-import { StatusBar } from 'expo-status-bar'; 
+import { StatusBar } from 'expo-status-bar';
+import DiscoverScreen from '../Screens/DiscoverScreen';
+import NewsScreen from '../Screens/NewsScreen';
+import TopNavigation from './TopNavigation';
+
 
 export default function InshortsTab() {
 
     const layout = useWindowDimensions();
 
-    const [index, setindex] = useState(1)
+    const [index, setIndex] = useState(1)
 
     const [routes] = useState([
         { key: 'first', title: 'Discover' },
         { key: 'second', title: 'News' }
     ])
 
-    // const renderScene = SceneMap({
-    //     first : DiscoverScreen,
-    //     second : NewsScreen
-    // })
+    const renderScene = SceneMap({
+        first: DiscoverScreen,
+        second: NewsScreen
+    })
 
     return (
         <TabView
@@ -25,6 +29,10 @@ export default function InshortsTab() {
             renderScene={renderScene}
             onIndexChange={setIndex}
             initialLayout={{ width: layout.width }}
+            renderTabBar={() => <TopNavigation
+                index={index}
+                setIndex={setIndex}
+            />}
         />
     )
 
