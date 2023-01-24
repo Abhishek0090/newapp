@@ -12,9 +12,13 @@ const Context = ({ children }) => {
     const [darkTheme, setDarkTheme] = useState(true);
 
     const fetchNews = async (reset = category) => {
-        const { data } = await axios.get(getNewsAPI(reset));
-        setNews(data);
-        setIndex(1);
+        try {
+            const { data } = await axios.get(getNewsAPI(reset));
+            setNews(data);
+            setIndex(1);
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const fetchNewsfromSource = async () => {

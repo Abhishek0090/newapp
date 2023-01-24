@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: 'red',
         textAlign: 'center',
-        marginTop: '30px'
-
+        marginTop: '30px' 
     },
 });

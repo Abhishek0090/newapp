@@ -5,13 +5,12 @@ import { SimpleLineIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 // import { NewsContext } from "../API/Context";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { NewsContext } from "../API/Context";
 
 const TopNavigation = ({ index, setIndex }) => {
-    // const { darkTheme, setDarkTheme, fetchNews } = useContext(NewsContext);
+    const { darkTheme, setDarkTheme, fetchNews } = useContext(NewsContext);
 
-    const darkTheme = false;
 
-   
 
     return (
         <View
