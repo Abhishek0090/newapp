@@ -10,9 +10,7 @@ import Carousel from "react-native-snap-carousel";
 import { NewsContext } from "../API/Context";
 import SingleNews from "../components/SingleNews";
 
-
 const NewsScreen = () => {
-
   const {
     news: { articles },
     darkTheme,
@@ -20,8 +18,9 @@ const NewsScreen = () => {
 
   const [activeIndex, setActiveIndex] = useState();
 
-  const windowHeight = Dimensions.get("window").height;   //for screen height
+  const windowHeight = Dimensions.get("window").height;
 
+  // console.log(articles && articles[9]);
 
   return (
     <View style={styles.carousel}>
@@ -40,11 +39,10 @@ const NewsScreen = () => {
         />
       )}
     </View>
-  )
-}
+  );
+};
 
-export default NewsScreen
-
+export default NewsScreen;
 
 const styles = StyleSheet.create({
   carousel: {
