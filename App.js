@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { StatusBar, StyleSheet, View } from "react-native";
 import Context, { NewsContext } from "./API/Context";
-import InshortsTabs from "./components/InshortsTabs"; 
+import InshortsTabs from "./components/InshortsTabs";  
 
 function App() {
   const { darkTheme } = useContext(NewsContext);
