@@ -8,9 +8,8 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { NewsContext } from "../API/Context";
 
 const TopNavigation = ({ index, setIndex }) => {
+
     const { darkTheme, setDarkTheme, fetchNews } = useContext(NewsContext);
-
-
 
     return (
         <View

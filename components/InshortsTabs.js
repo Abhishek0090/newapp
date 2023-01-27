@@ -7,7 +7,7 @@ import NewsScreen from '../Screens/NewsScreen';
 import TopNavigation from './TopNavigation';
 
 
-export default function InshortsTab() {
+export default function InshortsTabs() {
 
     const layout = useWindowDimensions();
 
