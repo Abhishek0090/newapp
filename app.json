@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "newapp",
-    "slug": "newapp",
+    "slug": "newsapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -32,8 +32,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "4f6eef3b-18c5-48bb-85c1-1d93842dc9ed"
+        "projectId": "98363c0f-5da1-46cc-9a80-5d65fb22f833"
       }
-    }
+    },
+    "owner": "abhi123124"
   }
 }
